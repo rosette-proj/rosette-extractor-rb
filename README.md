@@ -10,6 +10,8 @@ Extracts translatable strings from Ruby source code for the Rosette internationa
 Then, somewhere in your project:
 
 ```ruby
+# this project must be run under jruby
+require 'jbundler' # or somehow add dependent jars to your CLASSPATH
 require 'rosette/extractors/ruby-extractor'
 ```
 
@@ -53,7 +55,7 @@ end
 
 ## Requirements
 
-This project must be run under jRuby.
+This project must be run under jRuby. It uses [jbundler](https://github.com/mkristian/jbundler) to manage java dependencies via Maven. Run `gem install jbundler` and `jbundle` in the project root to download and install java dependencies.
 
 ## Running Tests
 
