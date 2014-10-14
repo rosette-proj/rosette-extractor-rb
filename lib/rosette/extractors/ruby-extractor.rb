@@ -32,7 +32,7 @@ module Rosette
       end
 
       def parse(ruby_code)
-        JRubyParser.parse(ruby_code, version: JRubyParser::Compat::RUBY1_8)
+        JRubyParser.parse(ruby_code, version: JRubyParser::Compat::RUBY2_0)
       rescue Java::OrgJrubyparserLexer::SyntaxException => e
         raise Rosette::Core::SyntaxError.new('syntax error', e, :ruby)
       end
