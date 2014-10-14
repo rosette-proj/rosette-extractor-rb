@@ -6,7 +6,7 @@ require 'bundler'
 require 'rspec/core/rake_task'
 require 'rubygems/package_task'
 
-require './lib/rosette/ruby-extractor'
+require './lib/rosette/extractors/ruby-extractor'
 
 Bundler::GemHelper.install_tasks
 
