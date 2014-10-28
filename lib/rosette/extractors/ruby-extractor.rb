@@ -7,6 +7,10 @@ module Rosette
   module Extractors
 
     class RubyExtractor < Rosette::Core::Extractor
+      def supports_line_numbers?
+        true
+      end
+
       protected
 
       # For some reason, when iterating over a jruby-parser AST, nodes with the
@@ -29,10 +33,6 @@ module Rosette
         else
           to_enum(__method__, ruby_code)
         end
-      end
-
-      def supports_line_numbers?
-        true
       end
 
       def parse(ruby_code)
