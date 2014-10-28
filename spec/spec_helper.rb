@@ -1,6 +1,5 @@
 # encoding: UTF-8
 
-require 'jbundler'
 require 'rspec'
 require 'rosette/extractors/ruby-extractor'
 require 'yaml'

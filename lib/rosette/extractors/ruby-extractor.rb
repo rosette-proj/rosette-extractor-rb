@@ -20,7 +20,7 @@ module Rosette
             unless seen_objects[node.object_id]
               case node.node_type
                 when Java::OrgJrubyparserAst::NodeType::FCALLNODE, Java::OrgJrubyparserAst::NodeType::CALLNODE
-                  yield node
+                  yield node, node.getPosition.getStartLine + 1
               end
             end
 
@@ -29,6 +29,10 @@ module Rosette
         else
           to_enum(__method__, ruby_code)
         end
+      end
+
+      def supports_line_numbers?
+        true
       end
 
       def parse(ruby_code)

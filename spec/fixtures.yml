@@ -1,16 +1,28 @@
 :fast-gettext:
   address.rb:
-    - Name cannot be blank. I'm a new phrase.
-    - City cannot be blank.
-    - State cannot be blank.
-    - State must be two letters long.
-    - State must be a valid United State.
-    - Zip code cannot be blank.
-    - Zip code must be a number.
-    - Zip code must be 5 characters long.
+    - key: Name cannot be blank. I'm a new phrase.
+      line_number: 21
+    - key: City cannot be blank.
+      line_number: 31
+    - key: State cannot be blank.
+      line_number: 37
+    - key: State must be two letters long.
+      line_number: 41
+    - key: State must be a valid United State.
+      line_number: 45
+    - key: Zip code cannot be blank.
+      line_number: 51
+    - key: Zip code must be a number.
+      line_number: 54
+    - key: Zip code must be 5 characters long.
+      line_number: 58
   relations_controller.rb:
-    - Relation was successfully created.
-    - Relation was successfully updated.
+    - key: Relation was successfully created.
+      line_number: 70
+    - key: Relation was successfully updated.
+      line_number: 87
   documents_controller.rb:
-    - Upload failed.
-    - Upload succeeded.
+    - key: Upload failed.
+      line_number: 40
+    - key: Upload succeeded.
+      line_number: 49
